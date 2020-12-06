@@ -76,3 +76,26 @@ def gettingDtsg(cookies):
         print("\033[1;31m[+]\033[0m Error on acquisition of fb_dtsg")
         driver.close()
         exit()
+
+
+def gettingGroupList(cookies, dtsg):
+    print("[+] Getting group list")
+    data = {'fb_dtsg': dtsg, 'fb_api_req_friendly_name':
+            'GroupsCometLeftRailResponsiveContainerQuery', 'doc_id': '2626684824102020', "variables": '{"adminGroupsCount":90,"memberGroupsCount":1000,"scale":1      }'}
+    r = req.post(baseUrl + 'api/graphql', headers=headers,
+                 cookies=cookies, data=data)
+    return printGroups(r.text)
+
+
+def printGroups(groups):
+    groups = json.loads(groups)
+    groups = groups['data']["viewer"]["groups_tab"]["tab_groups_list"]["edges"]
+    i = 0
+    print("[+] Group list:")
+    groupsList = []
+    for element in groups:
+        print(i, ': ', element['node']['name'])
+        i = i + 1
+        groupsList.append(
+            {'id': element['node']['id'], 'name': element['node']['name']})
+    return groupsList
