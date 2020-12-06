@@ -12,6 +12,13 @@ def main():
     text = input('Enter the image description: ')
     for group in selectedgroups:
         photoID = uploadImagetoStaticServer(cookies, dtsg, image)
+        variables = createVariable(
+            cookies['c_user'], text, group['id'], photoID)
+        postresponse = connectImageWithPost(cookies, dtsg, variables)
+        url = 'https://www.facebook.com/photo/?fbid='+photoID
+        print('\033[0;32m[+]\033[0m The url for the image in, ',
+              group['name'], ' is: ', url)
+        sleep(6)
 
 
 if __name__ == "__main__":
