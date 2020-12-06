@@ -7,7 +7,11 @@ def main():
     cookies = doLogin()
     dtsg = gettingDtsg(cookies)
     groupsList = gettingGroupList(cookies, dtsg)
-    selectGroups(groupsList)
+    selectedgroups = selectGroups(groupsList)
+    image = input('Enter the image path: ')
+    text = input('Enter the image description: ')
+    for group in selectedgroups:
+        photoID = uploadImagetoStaticServer(cookies, dtsg, image)
 
 
 if __name__ == "__main__":

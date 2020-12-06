@@ -121,3 +121,20 @@ def selectGroups(groupsList):
     for item in groups:
         comparegroups.append(groupsList[int(item)])
     return comparegroups
+
+
+def uploadImagetoStaticServer(cookies, dtsg, image):
+    url = 'https://upload.facebook.com/ajax/react_composer/attachments/photo/upload?__a=1&fb_dtsg=' + dtsg
+    data = MultipartEncoder(fields={
+        'profile_id': cookies['c_user'],
+        'source': '8',
+        'waterfallxapp': 'comet',
+        'farr': ('filename', open(image, 'rb'), 'image/'+image[-3:]),
+        'upload_id': 'jsc_c_a0'
+    }, boundary='---------------------------368542852711876012201108144481')
+    headers['Content-Type'] = data.content_type
+    r = req.post(url, data=data, headers=headers, cookies=cookies)
+    locale = r.text.find('"photoID":"')
+    photoID = r.text[locale+11:locale+27]
+    print(photoID)
+    return photoID
