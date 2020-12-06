@@ -6,7 +6,8 @@ from time import sleep
 def main():
     cookies = doLogin()
     dtsg = gettingDtsg(cookies)
-    gettingGroupList(cookies, dtsg)
+    groupsList = gettingGroupList(cookies, dtsg)
+    selectGroups(groupsList)
 
 
 if __name__ == "__main__":

@@ -79,23 +79,45 @@ def gettingDtsg(cookies):
 
 
 def gettingGroupList(cookies, dtsg):
-    print("[+] Getting group list")
-    data = {'fb_dtsg': dtsg, 'fb_api_req_friendly_name':
-            'GroupsCometLeftRailResponsiveContainerQuery', 'doc_id': '2626684824102020', "variables": '{"adminGroupsCount":90,"memberGroupsCount":1000,"scale":1      }'}
-    r = req.post(baseUrl + 'api/graphql', headers=headers,
-                 cookies=cookies, data=data)
-    return printGroups(r.text)
+    try:
+        print("\033[0;32m[+]\033[0m Getting group list")
+        data = {'fb_dtsg': dtsg, 'fb_api_req_friendly_name':
+                'GroupsCometLeftRailResponsiveContainerQuery', 'doc_id': '2626684824102020', "variables": '{"adminGroupsCount":90,"memberGroupsCount":1000,"scale":1      }'}
+        r = req.post(baseUrl + 'api/graphql', headers=headers,
+                     cookies=cookies, data=data)
+        return printGroups(r.text)
+    except:
+        print("\033[1;31m[+]\033[0m Error on acquisition of group list")
+        exit()
 
 
 def printGroups(groups):
-    groups = json.loads(groups)
-    groups = groups['data']["viewer"]["groups_tab"]["tab_groups_list"]["edges"]
-    i = 0
-    print("[+] Group list:")
-    groupsList = []
-    for element in groups:
-        print(i, ': ', element['node']['name'])
-        i = i + 1
-        groupsList.append(
-            {'id': element['node']['id'], 'name': element['node']['name']})
-    return groupsList
+    try:
+        groups = json.loads(groups)
+        groups = groups['data']["viewer"]["groups_tab"]["tab_groups_list"]["edges"]
+        i = 0
+        print("\033[0;32m[+]\033[0m Group list:")
+        groupsList = []
+        for element in groups:
+            print(i, ': ', element['node']['name'])
+            i = i + 1
+            groupsList.append(
+                {'id': element['node']['id'], 'name': element['node']['name']})
+        return groupsList
+    except:
+        print("\033[1;31m[+]\033[0m Error on print group list")
+        exit()
+
+
+def selectGroups(groupsList):
+    groups = []
+    text = 'a'
+    while text != "":
+        text = input(
+            "Enter the number of groups you want to post [Enter to leave]: ")
+        groups.append(text)
+    del(groups[-1])
+    comparegroups = []
+    for item in groups:
+        comparegroups.append(groupsList[int(item)])
+    return comparegroups
