@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Proffy" src=".github/logo.png" height="100px" /><br/>
+    <img alt="P.A.I.F" src=".github/logo.png" height="100px" /><br/>
     Python | Selenium | Requests
 </h1>
 
@@ -16,13 +16,18 @@
 <br/>
 
 ## Sobre
-O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de postagem de imagens em grupos do Facebook, para isto foi necessário fazer analisar todas as requisições http/https feitas entre o navegador e a plataforma após, elas foram reproduzidas no programa.
+O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de postagem de imagens em grupos do Facebook, para isto foi necessário analisar todas as requisições http/https feitas entre o navegador e a plataforma após, elas foram reproduzidas no programa usando a linguagem de programação Python e as bibliotecas RRequests e Selenium.
 
 ## Tecnologias
 
 - [Python](https://www.python.org/)
 - [Selenium](https://selenium-python.readthedocs.io/)
 - [Requests](https://requests.readthedocs.io/en/master/)
+
+## Configuração
+  Caso use linux, instale o driver na pasta /usr/local/bin/
+  
+  Para qualquer outro S.O faz-se necessário modificar a 10° linha do arquivo functions.py para a localização real do driver
 
 ## Como Executar
 
@@ -32,7 +37,7 @@ O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de po
   - É **necessário** possuir o **[Git](https://git-scm.com/)** instalado e configurado.
   - Também, é **preciso** ter o gerenciador de pacotes **[PIP](https://pip.pypa.io/en/stable/installing/)**.
   - É **essencial** ter o **[Selenium](https://selenium-python.readthedocs.io/)** .
-  - Por fim, é necessário o driver de seu **[navegador](https://selenium-python.readthedocs.io/installation.html#drivers)** instalado.
+  - Por fim, é necessário instalar o driver de seu **[navegador](https://selenium-python.readthedocs.io/installation.html#drivers)**.
 
 1. Faça um clone do repositório:
 
@@ -43,8 +48,6 @@ O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de po
 2. Executando a Aplicação:
 
 ```sh
-  # Caso use linux, instale o driver na pasta /usr/local/bin/
-  # Para qualquer outro S.O faz-se necessário modificar a 10° linha do arquivo functions.py para a localização real do driver
   $ cd P.A.I.F
   $ python3.8 main.py
 ```
