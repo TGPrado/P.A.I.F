@@ -9,9 +9,9 @@
   <img alt="GitHub language count" src="https://img.shields.io/github/stars/T635/P.A.I.F?style=social">&nbsp;
 </p>
 <p align="center">
-  <a href="#bookmark-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#boom-como-executar">Como Executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#como-executar">Como Executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 <br/>
 
@@ -24,10 +24,7 @@ O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de po
 - [Selenium](https://selenium-python.readthedocs.io/)
 - [Requests](https://requests.readthedocs.io/en/master/)
 
-## Configuração
-  Caso use linux, instale o driver na pasta /usr/local/bin/
-  
-  Para qualquer outro S.O faz-se necessário modificar a 10° linha do arquivo functions.py para a localização real do driver
+
 
 ## Como Executar
 
@@ -38,6 +35,10 @@ O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de po
   - Também, é **preciso** ter o gerenciador de pacotes **[PIP](https://pip.pypa.io/en/stable/installing/)**.
   - É **essencial** ter o **[Selenium](https://selenium-python.readthedocs.io/)** .
   - Por fim, é necessário instalar o driver de seu **[navegador](https://selenium-python.readthedocs.io/installation.html#drivers)**.
+- ### **Configuração**
+  Caso use linux, instale o driver na pasta /usr/local/bin/
+  
+  Para qualquer outro S.O faz-se necessário modificar a 10° linha do arquivo functions.py para a localização real do driver
 
 1. Faça um clone do repositório:
 
