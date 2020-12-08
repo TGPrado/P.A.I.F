@@ -16,7 +16,7 @@
 <br/>
 
 ## Sobre
-O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de postagem de imagens em grupos do Facebook, para isto foi necessário analisar todas as requisições http/https feitas entre o navegador e a plataforma após, elas foram reproduzidas no programa usando a linguagem de programação Python e as bibliotecas RRequests e Selenium.
+O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de postagem de imagens em grupos do Facebook, para isto foi necessário analisar, com um proxy, todas as requisições http/https feitas entre o navegador e a plataforma após, elas foram reproduzidas no programa usando a linguagem de programação Python e as bibliotecas Requests e Selenium.
 
 ## Tecnologias
 
