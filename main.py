@@ -1,4 +1,3 @@
-#!/usr/bin/python3.8
 from functions import *
 from time import sleep
 
