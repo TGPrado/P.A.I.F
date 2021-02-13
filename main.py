@@ -4,8 +4,8 @@ from time import sleep
 
 
 def main():
-    cookies = doLogin()
-    dtsg = gettingDtsg(cookies)
+    doLogin()
+    dtsg, cookies = gettingDtsg()
     groupsList = gettingGroupList(cookies, dtsg)
     selectedgroups = selectGroups(groupsList)
     image = input('Enter the image path: ')

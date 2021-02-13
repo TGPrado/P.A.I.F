@@ -16,6 +16,7 @@
 <br/>
 
 ## Sobre
+
 O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de postagem de imagens em grupos do Facebook, para isto foi necessário analisar, com um proxy, todas as requisições http/https feitas entre o navegador e a plataforma após, elas foram reproduzidas no programa usando a linguagem de programação Python e as bibliotecas Requests e Selenium.
 
 ## Tecnologias
@@ -23,8 +24,6 @@ O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de po
 - [Python](https://www.python.org/)
 - [Selenium](https://selenium-python.readthedocs.io/)
 - [Requests](https://requests.readthedocs.io/en/master/)
-
-
 
 ## Como Executar
 
@@ -35,10 +34,12 @@ O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de po
   - Também, é **preciso** ter o gerenciador de pacotes **[PIP](https://pip.pypa.io/en/stable/installing/)**.
   - É **essencial** ter o **[Selenium](https://selenium-python.readthedocs.io/)** .
   - Por fim, é necessário instalar o driver de seu **[navegador](https://selenium-python.readthedocs.io/installation.html#drivers)**.
+
 - ### **Configuração**
+
   Caso use linux, instale o driver na pasta /usr/local/bin/
-  
-  Para qualquer outro S.O faz-se necessário modificar a 10° linha do arquivo functions.py para a localização real do driver
+
+  Para qualquer outro S.O faz-se necessário colocar o driver na pasta do programa.
 
 1. Faça um clone do repositório:
 
@@ -52,6 +53,3 @@ O **P.A.I.F** é uma aplicação desktop feita para automatizar o processo de po
   $ cd P.A.I.F
   $ python3.8 main.py
 ```
-
-
-
